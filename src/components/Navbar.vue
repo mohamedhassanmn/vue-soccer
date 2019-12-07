@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar color="#2ecc71" dark>
-      <v-toolbar-title id="logo">Vuekart</v-toolbar-title>
+      <v-toolbar-title id="logo">VueSoccer</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon> LOGIN</v-btn>
     </v-app-bar>
