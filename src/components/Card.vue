@@ -1,20 +1,20 @@
 <template>
     <v-container>
       <v-row dense justify="center">
-        <v-col v-for="(card) in $store.state.data.slice(0,9)" lg="4" md="6"
+        <v-col v-for="(card,i) in val" lg="4" md="6"
           :key="card.title"
         >
-        <router-link :to="{name:'pathTrack',params:{title:card.title.toLowerCase().split(' ').join('')}}">
           <v-card class="card">
-            <v-img
-              :src="card.thumbnail"
-              class="white--text align-end"
-              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-              height="200px"
-            >
-              <v-card-title style="color:white" v-text="card.title"></v-card-title>
-            </v-img>
-
+            <router-link :to="{name:'pathTrack',params:{title:i}}">
+                <v-img
+                :src="card.thumbnail"
+                class="white--text align-end"
+                gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+                height="200px"
+                >
+                <v-card-title style="color:white" v-text="card.title"></v-card-title>
+                </v-img>
+            </router-link>
             <v-bottom-navigation color="#2ecc71">
               <v-spacer></v-spacer>
 
@@ -31,7 +31,6 @@
               </v-btn>
             </v-bottom-navigation>
           </v-card>
-        </router-link>
         </v-col>
       </v-row>
       <br><br><br>
@@ -45,7 +44,7 @@
 
 <script>
 export default {
-
+    props:["val"]
 }
 </script>
 

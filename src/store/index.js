@@ -7,16 +7,22 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    data:[]
+    data:[],
+    logo:"VueSoccer"
+  },
+  getters:{
+    getData(state){
+      return state.data
+    }
   },
   mutations: {
-   setData(state,payload){
-    state.data=payload
-   }
+    setData(state,payload){
+      state.data=payload
+    }
   },
   actions: {
     getData({commit}){
-      console.log("i am in")
+      // console.log("i am in")
       axios.get(
         FOOTBALL_API,
         {
@@ -28,7 +34,7 @@ export default new Vuex.Store({
       )
       .then(
         res=>{
-        console.log(res.data)
+        // console.log(res.data)
         commit("setData",res.data)
         },
         err=>alert(err)

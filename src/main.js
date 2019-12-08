@@ -4,13 +4,12 @@ import router from "./router";
 import store from "./store";
 import VueResource from "vue-resource";
 import vuetify from "./plugins/vuetify";
+import {LOGIN_FIREBASE} from '@/store/config.js'
 
 Vue.use(VueResource);
 Vue.config.productionTip = false;
 
-Vue.http.options.root = "https://free-football-soccer-videos1.p.rapidapi.com/v1/";
-Vue.http.headers.common['x-rapidapi-host'] = 'free-football-soccer-videos1.p.rapidapi.com';
-Vue.http.headers.common['x-rapidapi-key'] = '6d0b8a918dmsh9ca26f9dc1d1fddp1d5c1bjsn14e97ff4a843';
+Vue.http.options.root = LOGIN_FIREBASE;
 
 new Vue({
   router,

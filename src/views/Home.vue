@@ -6,7 +6,7 @@
       <h2 class="heading-2">few glimpse</h2>
       <hr>
     </div>
-    <Card/>
+    <Card :val='$store.state.data.slice(0,9)'/>
       <br><br><br>
     <Footer/>
   </div>
@@ -23,7 +23,6 @@ import Footer from "@/components/Footer"
 export default {
   methods:{
     sendReq(){
-      console.log("hi")
       this.$store.dispatch("getData")
     }
   },
@@ -34,7 +33,6 @@ export default {
     Footer
   },
   created(){
-    console.log("hello")
     this.sendReq()
   }
 }
