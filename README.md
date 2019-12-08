@@ -1,4 +1,4 @@
-# vue-e-kart
+# vue-soccer
 
 ## Project setup
 ```
