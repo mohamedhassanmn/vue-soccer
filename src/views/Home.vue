@@ -7,6 +7,7 @@
       <hr>
     </div>
     <Card/>
+      <br><br><br>
     <Footer/>
   </div>
 </template>
